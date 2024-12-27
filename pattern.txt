@@ -1,0 +1,27 @@
+Padrão do projeto, sempre escreveremos os recursos com os seguites padrões
+
+Ex: minha variavel
+
+1. Recurso de rotas ($_GET) em PT kebab-case: minha-variavel
+2. Pastas e Arquivos do src em EN PascalCase: MyVariable
+3. Variaveis e Funções em EN camelCase: myVariable
+4. Banco de Dados em PT snake_case: minha_variavel
+
+os recursos: pagina, acao, id.
+
+
+Entregar em formato compactado (.rar ou .zip) o seu projeto final desenvolvido durante o 2 semestre.
+
+O projeto deve conter: 
+
+Pagina inicial do sei site INSTITUCIONAL com informações da sua empresa;
+Menu com as seguintes paginas:
+- Vitrine (Onde são apresentados os produtos cadastrados) ✅
+- Quem somos (Pagina onde apresentam cada um dos alunos que fizeram o trabalho) ✅
+- Pagina de contato: (Formulário simples para contato) ✅
+- Paginas de login e registrar-se ✅
+Sistema administrativo com bootstrap e menu responsivo:
+- Página de clientes com Criar, Ver e Deletar. ✅
+- Página de Produtos com Criar, Ver ✅, Editar e Deletar. 
+
+O arquivo em anexo é o meu código base, podem utilizar para estudar e finalizar o projeto

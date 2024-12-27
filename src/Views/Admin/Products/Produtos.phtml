@@ -1,0 +1,85 @@
+<style>
+        .product-card {
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <title>Product Listings</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center my-4">Product Listings</h1>
+    
+    <!-- Button Group -->
+    <div class="text-center mb-4">
+        <button id="addProduct" class="btn btn-outline-success">Add New Product</button>
+        <button id="editProduct" class="btn btn-outline-warning">Edit Product</button>
+        <button id="deleteProduct" class="btn btn-outline-danger">Delete Product</button>
+    </div>
+
+    <div class="row">
+        <!-- Product 1 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_812612-MLB31095451212_062019-O.webp" alt="Chaveiro Transmissão Manual" class="product-image">
+                <h5 class="mt-2">Chaveiro Transmissão Manual</h5>
+                <p class="text-muted">$19.99</p>
+                <p>Lindo chaveiro, você pode engatar as 6 marchas de verdade!.</p>
+                <button class="btn btn-primary add-to-cart">Adicionar ao carrinho</button>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_977937-MLB73810224962_012024-O.webp" alt="Chaveiro Roda" class="product-image">
+                <h5 class="mt-2">Chaveiro Roda</h5>
+                <p class="text-muted">$29.99</p>
+                <p>Ótima oportunidade pra você, que quer um acessório, mas não tem dinheiro para comprar um em tamanho real!!.</p>
+                <button class="btn btn-primary add-to-cart">Adicionar ao carrinho</button>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_843842-MLB80076612902_102024-O.webp" alt="Amortecedor" class="product-image">
+                <h5 class="mt-2">Amortecedor</h5>
+                <p class="text-muted">$39.99</p>
+                <p>Para você usar case tenha uma queda por alguém.</p>
+                <button class="btn btn-primary add-to-cart">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#addProduct').on('click', function() {
+            alert('Add New Product functionality to be implemented.');
+        });
+
+        $('#editProduct').on('click', function() {
+            alert('Edit Product functionality to be implemented.');
+        });
+
+        $('#deleteProduct').on('click', function() {
+            alert('Delete Product functionality to be implemented.');
+        });
+
+        // Event listener for "Adicionar ao carrinho" buttons
+        $('.add-to-cart').on('click', function() {
+            alert('O produto foi adicionado ao carrinho!');
+        });
+    });
+</script>

@@ -1,0 +1,40 @@
+<?php
+require_once 'src/Models/Customer.php';
+
+if (isset($_GET['id'])) {
+    $customerId = $_GET['id'];
+    $customerModel = new Customer();
+    $customer = $customerModel->find($customerId);
+
+    if (!$customer) {
+        die("Customer not found.");
+    }
+} else {
+    die("Invalid request.");
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['nome'];
+    $rg = $_POST['rg'];
+
+    $customerModel->update($customerId, $name, $rg);
+    header("Location: /?pagina=clientes"); // Redirect after update
+    exit;
+}
+?>
+
+<div class="container p-5">
+    <h2>Editar Cliente</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" value="<?= htmlspecialchars($customer->$nome) ?>" required>
+        </div>
+        <div class="mb-3">
+            <label for="rg" class="form-label">RG</label>
+            <input type="text" class="form-control" id="rg" name="rg" value="<?= htmlspecialchars($customer->$rg) ?>" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="/?pagina=clientes" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

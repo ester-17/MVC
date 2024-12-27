@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
+    --cor-escura: #023047;
+    --cor-clara: #fb8500;
+    --cor-secundaria: #219ebc;
+}
+
+body {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    font-family: "Roboto Slab", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+a:link, a:visited, a:hover, a:active { 
+    text-decoration: none; 
+    color: var(--cor-clara);
+} 
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 32px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+}
+
+nav ul li:hover ul {
+    display: block;
+} 
+
+main {
+    padding-top: 5em;
+}
+
+main form {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    border: 1px solid var(--cor-secundaria);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+main form h3 {
+    text-align: center;
+}
+
+main form input, main form button {
+    margin: 10px 0px;
+}
+
+main form input {
+    color: var(--cor-escura);
+    background-color: var(--cor-secundaria);
+    font-size: 2em;
+    border: none;
+    border-radius: 5px;
+}
+
+main form button {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    border: none;
+    border-radius: 5px;
+    font-size: 2em;
+}

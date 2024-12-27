@@ -1,0 +1,38 @@
+<div class="container p-5">
+    <div class="d-flex justify-content-end">
+        <a href="/?pagina=clientes&acao=adicionar" class="btn btn-outline-primary">
+            Adicionar novo cliente
+        </a>
+    </div>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">RG</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($table as $customer): ?>
+            <tr>
+                <th scope="row"><?= $customer['id'] ?></th>
+                <td><?= htmlspecialchars($customer['nome']) ?></td>
+                <td><?= htmlspecialchars($customer['rg']) ?></td>
+                <td width=200>
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <a href="/?pagina=clientes&acao=excluir&id=<?= $customer['id'] ?>" class="btn btn-outline-danger" onclick="return confirmDelete();">Excluir</a>
+                    </div>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
+<script>
+function confirmDelete() {
+    return confirm("Você tem certeza que deseja excluir este cliente?");
+}
+</script>
